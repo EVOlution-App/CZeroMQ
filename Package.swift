@@ -5,5 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "CZeroMQ",
-    pkgConfig: "libzmq"
+    pkgConfig: "libzmq",
+    providers: [
+        .brew(["zmq"]),
+        .apt(["libzmq3-dev"])
+    ]
 )
